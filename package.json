@@ -5,6 +5,7 @@
   "main": "dist/bitbar-cloud-api-client.min.js",
   "types": "dist/index.d.ts",
   "scripts": {
+    "preinstall": "npx npm-force-resolutions",
     "build": "npx rollup -c",
     "test": "env TS_NODE_PROJECT=\"tsconfig.test.json\" mocha --require @babel/register --require ts-node/register",
     "test:coverage": "env TS_NODE_PROJECT=\"tsconfig.test.json\" nyc mocha --require @babel/register --require ts-node/register",
@@ -31,6 +32,9 @@
     "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
+  "resolutions": {
+    "ansi-regex": "5.0.1"
+  },
   "devDependencies": {
     "@babel/cli": "^7.16.0",
     "@babel/core": "^7.16.0",
@@ -46,8 +50,8 @@
     "@typescript-eslint/parser": "^2.34.0",
     "chai": "^4.3.4",
     "core-js": "^3.19.2",
-    "eslint": "^6.8.0",
-    "mocha": "^7.2.0",
+    "eslint": "^8.7.0",
+    "mocha": "^9.2.0",
     "nyc": "^15.1.0",
     "rollup": "^1.32.1",
     "rollup-plugin-delete": "^2.0.0",
@@ -55,7 +59,7 @@
     "rollup-plugin-typescript2": "^0.27.3",
     "ts-node": "^10.4.0",
     "tslib": "^1.14.1",
-    "typedoc": "^0.17.8",
+    "typedoc": "^0.22.11",
     "typescript": "^3.9.10"
   },
   "dependencies": {
